@@ -1,0 +1,92 @@
+<DOCTYPE html>
+<html lang="en">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<title>Reconnecting...</title>
+
+<body>
+	<!-- <div class="overlay" id="overlay3" style="background-image: url('images/mangrove.png'); background-size: fit; background-position: center;"> 
+	</div>-->
+
+	<!-- <div class="overlay" id="overlay2" style="background-image: url('images/river.png'); background-size: cover; background-position: center;"> 
+	</div>-->
+
+	<div class="overlay" id="overlay1" style="background-image: url('images/river.jpg'); background-size: cover; background-position: center; opacity: 90%; pointer-events: none">
+	</div>
+
+	<div class="overlay" id="overlay2" style="background-image: url('images/interface.png'); background-size: cover; background-position: center; opacity: 90%; pointer-events: none">
+	</div>
+
+	<div class="main" id="intro">
+		<h1 style="font-size: 40px;">r e c o n n e c t i n g . . . 
+		</h1>
+		<p style="font-size: 30px;" onclick="clearbkgd()">ENTER</p>
+	</div>
+
+	<div class="main" id="start" style="display: none;">
+		<h1 style="font-size: 30px; margin-bottom: 0;">the internet is vast across the land, sea, and sky, and heavy with material and labor...
+		</h1>
+		<a href="cloud.html"><p style="font-size: 20px;">EXPLORE BEYOND THE INTERFACE</p></a>
+	</div>
+
+	<marquee direction=right style="height: 100%; width: 100%; z-index: -15;">
+		<a href="cloud.html"><div class="marquee-div" style="width: 400px; height: 400px; background-image: url('images/satellite.png');">
+		</div></a>
+	</marquee>
+
+	<div class="overlay" style="background-image: url('images/sky-network.jpg'); background-size: cover; background-position: center; opacity: 90%; z-index: -20; pointer-events: none">
+	</div>
+
+	<!-- <marquee direction=left scrollamount=4 style="height: 100%; width: 100%; z-index: -20; ">
+		<a href="reconnecting-clouds.html"><div class="marquee-div" style="width: 400px; height: 400px; background-image: url('images/router-1.png');">
+		</div></a>
+	</marquee> -->
+
+</body>
+
+</html>
+
+<script>
+	// function fadeIn(element, interval) {
+	// 	let element = document.getElementById("elementId");
+	//       let opacity = 0;
+	//       let fadeIn = setInterval(() => {
+	//          if (opacity >= 1) {
+	//             clearInterval(fadeIn);
+	//          }
+	//          element.style.opacity = opacity;
+	//          opacity += 0.1;
+	//       }, interval);
+	// }
+
+	function fadeOut(element, interval) {
+	   var el = document.getElementById(element);
+	   setInterval(function() {
+	      var opacity = el.style.opacity;
+	      if (opacity > 0) {
+	         opacity -= 0.1;
+	         el.style.opacity = opacity;
+	      }
+	   }, interval);
+	   el.remove();
+	}
+
+	// function showintro() {
+	// 	fadeIn("intro", 500);
+	// }
+
+	function clearbkgd() {
+		fadeOut("overlay1", 300);
+		document.getElementById("intro").style.display = "none";
+		document.getElementById("start").style.display = "block";
+	}
+
+	// function clearinterface() {
+	// 	fadeOut("overlay2", 500);
+	// }
+
+
+</script>

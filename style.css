@@ -1,0 +1,82 @@
+@font-face {
+  font-family: 'Mondwest';
+  src: url("fonts/PPMondwest-Regular.otf");
+}
+
+@font-face {
+  font-family: 'NeueBit';
+  src: url("fonts/PPNeueBit-Bold.otf");
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	cursor: help;
+	background-color: black;
+}
+
+body {
+	height: 100%;
+	color: white;
+	margin: 0;
+}
+
+h1 {
+	font-size: 30px;
+	font-family: 'Mondwest';
+}
+
+p {
+ 	display: inline-block;
+ 	vertical-align: middle;
+ 	line-height: normal;
+	font-family: 'NeueBit';
+	font-size: 22px;
+}
+
+a {
+	color: white;
+}
+
+.main {
+	text-align: center;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 700px;
+	height: 100px;
+	z-index: 50;
+}
+
+.overlay {
+	position: absolute;
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+}
+
+#overlay1 {
+	z-index: 10;
+}
+
+#overlay2 {
+	z-index: 20;
+}
+
+#overlay3 {
+	z-index: 30;
+}
+
+.marquee-div {
+	background-size: contain; 
+	background-position: center; 
+	background-repeat: no-repeat;
+}
