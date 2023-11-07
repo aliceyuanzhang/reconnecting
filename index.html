@@ -12,22 +12,22 @@
 <body>
 
 	<section id="section-intro" style="z-index: 100; position: fixed;">
-		<div class="frames" style="position: fixed; top: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 100%;">
+		<div class="frames" id="intro-frame" style="position: fixed; top: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 100%;">
 
-			<div class="overlay" id="overlay1" style="background-image: url('images/river.jpg'); background-size: cover; background-position: center; opacity: 95%; pointer-events: none">
+			<div class="overlay" id="overlay1" style="background-image: url('images/data-lake.gif'); background-size: cover; background-position: center; opacity: 95%; pointer-events: none">
 			</div>
 
 			<div class="overlay" id="overlay2" data-0="opacity: 1;" data-5000="opacity: 0;" style="background-image: url('images/interface.png'); background-size: cover; background-position: center; opacity: 90%; pointer-events: none">
 			</div>
 
-			<!-- <div class="overlay" data-0="opacity: 0;" data-3000="opacity: 1;" style="background-image: url('images/river.png'); background-size: cover; background-position: center; opacity: 90%; pointer-events: none">
-			</div> -->
+			<div class="overlay" data-7500="opacity: 0;" data-8500="opacity: 1;" style="background-image: url('images/river.png'); background-size: cover; background-position: center; opacity: 90%; pointer-events: none">
+			</div>
 
 			<div class="main" id="intro">
-				<h1 style="font-size: 40px;">r e c o n n e c t i n g . . . 
+				<h1 style="font-size: 40px; margin-bottom:0; ">r e c o n n e c t i n g . . . 
 				</h1>
 				<p>explore beyond the interface</p><br>
-				<p style="font-size: 24px;" onclick="clearbkgd()">CLICK TO ENTER</p>
+				<p style="font-size: 24px;" onclick="clearbkgd()">[ BEGIN ]</p>
 			</div>
 
 		</div>
@@ -216,22 +216,30 @@
 		</div>
 	</section>
 
+	<section id="section-final">
+		<div class="frames" data-7800="opacity: 0;" data-8500="opacity: 1; width: 100%; height: 100%; top: 0%; left: 0%;" data-anchor-target="#section-final" style="position: fixed; background-image: url('images/mine.gif'); background-position: center; background-repeat: no-repeat; background-size: cover;">
+			<div class="main">
+				<h1>technological grief procession</h1>
+
+				<br>
+				<audio controls>
+				  <source src="audio/procession.mp3" type="audio/mp3" />
+				</audio>
+
+				<br>
+				<p>a voice guide by alice yuan zhang 
+				<br>recorded for transmediale vorspiel 2023<br>
+				curated by noemi garay of panke.gallery</p>
+			</div>
+		</div>
+	</section>
+
 </body>
 
 </html>
 
 <script>
-	// function fadeIn(element, interval) {
-	// 	let element = document.getElementById("elementId");
-	//       let opacity = 0;
-	//       let fadeIn = setInterval(() => {
-	//          if (opacity >= 1) {
-	//             clearInterval(fadeIn);
-	//          }
-	//          element.style.opacity = opacity;
-	//          opacity += 0.1;
-	//       }, interval);
-	// }
+	var s = skrollr.init();
 
 	function fadeOut(element, interval) {
 	   var el = document.getElementById(element);
@@ -245,25 +253,12 @@
 	   el.remove();
 	}
 
-	// function showintro() {
-	// 	fadeIn("intro", 500);
-	// }
-
 	function clearbkgd() {
 		fadeOut("overlay1", 300);
 		document.getElementById("intro").style.display = "none";
 		document.getElementById("start").style.display = "block";
+		document.getElementById("intro-frame").style["pointer-events"] = "none";
 	}
 
-	// function clearinterface() {
-	// 	fadeOut("overlay2", 500);
-	// }
-
-	var s = skrollr.init();
-
-	// $('html, body').css({
-	//     overflow: 'hidden',
-	//     height: '100%'
-	// });
 
 </script>
